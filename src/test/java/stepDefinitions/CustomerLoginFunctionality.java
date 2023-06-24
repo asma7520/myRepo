@@ -16,13 +16,16 @@ import static org.junit.Assert.assertEquals;
 public class CustomerLoginFunctionality extends Base {
     @Given("I am in Landing Page")
     public void i_am_in_landing_page() {
+
         navigate("http://it.microtechlimited.com");
     }
 
     @Then("I click on Login Menu")
+
     public void i_click_on_login_menu() {
         click( LandingPage.menuLogin );
     }
+
     @Then("I click on Customer Login Menu")
     public void i_click_on_customer_login_menu() {
         click(EmployeeLoginPage.menuCustomerLogin );
@@ -43,6 +46,7 @@ public class CustomerLoginFunctionality extends Base {
     public void verify_i_am_in_customer_home_page() {
         String welcomeMsg = getText( CustomerHomePage.labelWelcomeMsg );
         assertEquals( "Welcome David", welcomeMsg);
+        System.out.println("Verification done");
     }
 
 
